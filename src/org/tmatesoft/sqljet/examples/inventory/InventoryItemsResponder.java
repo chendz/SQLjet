@@ -27,7 +27,7 @@ public class InventoryItemsResponder {
 
 	private void printShowUsers(InventoryDB db, StringBuffer buffer) throws SqlJetException {
 		if (db.getVersion() > 1) {
-			buffer.append("<p><a href='/users'>Show users</a></p>");
+			buffer.append("<p><a href='/users'>显示用户</a></p>");
 		}
 	}
 
@@ -48,7 +48,7 @@ public class InventoryItemsResponder {
 		} else if ("desc".equalsIgnoreCase(namesStr)) {
 			namesAsc = false;
 		}
-		buffer.append("<h2>Inventory</h2>");
+		buffer.append("<h2>库存</h2>");
 		InventoryDB db = new InventoryDB();
 		try {
 			db.beginTransaction(false);
